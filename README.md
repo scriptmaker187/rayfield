@@ -532,9 +532,9 @@ local function Hide(notify: boolean?)
 	Debounce = true
 	if notify then
 		if useMobileSizing then
-			RayfieldLibrary:Notify({Title = "Interface Hidden", Content = "The interface has been hidden, you can unhide the interface by tapping 'Show Rayfield'.", Duration = 7})
+			RayfieldLibrary:Notify({Title = "Interface Hidden", Content = "Dev-Hub has been hidden, you can unhide the interface by tapping 'Show Dev-Hub'.", Duration = 7})
 		else
-			RayfieldLibrary:Notify({Title = "Interface Hidden", Content = "The interface has been hidden, you can unhide the interface by tapping K.", Duration = 7})
+			RayfieldLibrary:Notify({Title = "Interface Hidden", Content = "Dev-Hub has been hidden, you can unhide the interface by tapping V.", Duration = 7})
 		end
 	end
 	TweenService:Create(Main, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {Size = UDim2.new(0, 470, 0, 0)}):Play()
@@ -2496,7 +2496,7 @@ Topbar.Hide.MouseButton1Click:Connect(function()
 end)
 
 UserInputService.InputBegan:Connect(function(input, processed)
-	if (input.KeyCode == Enum.KeyCode.K and not processed) then
+	if (input.KeyCode == Enum.KeyCode.V and not processed) then
 		if Debounce then return end
 		if Hidden then
 			Hidden = false
